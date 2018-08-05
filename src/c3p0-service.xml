@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE server>
+
+<server>
+
+   <mbean code="com.mchange.v2.c3p0.mbean.C3P0PooledDataSource"
+          name="jboss:service=C3P0PooledDataSourceVsky">
+     
+      <attribute name="jndiName">java:Vsky</attribute>
+      <attribute name="jdbcUrl">jdbc:mysql://localhost:3306/chatroom?characterEncoding=utf8&useSSL=true</attribute>
+      <attribute name="driverClass">com.mysql.jdbc.Driver</attribute>
+      <attribute name="user">root</attribute>
+      <attribute name="password">123456</attribute>
+
+      <depends>jboss:service=Naming</depends>
+   </mbean>
+
+</server>
+
+   
